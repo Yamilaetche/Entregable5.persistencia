@@ -21,15 +21,17 @@ for (let i: number= 0; i<precios.length; i++){
 }
 
 //Guarda info en txt
-fs.writeFileSync("./test.txt", contPrecios);
-fs.writeFileSync("./test.txt", contProductos);
+fs.writeFileSync("./precios.txt", contPrecios);
+fs.writeFileSync("./productos.txt", contProductos);
+
+
 
 //lee info de txt
-const datosPrecio: string = fs.readFileSync("./test.txt", "utf8");
+const datosPrecio: string = fs.readFileSync("./precios.txt", "utf8");
 const datosPrecio2:string = datosPrecio.trim();
 const nuevoArray1: string[]= datosPrecio2.split(" ");
 
-const datosProductos: string = fs.readFileSync("./test.txt", "utf8");
+const datosProductos: string = fs.readFileSync("./productos.txt", "utf8");
 const datosProductos2:string = datosProductos.trim();
 const nuevoArray2: string[]= datosProductos2.split(" ");
 console.log(nuevoArray1);
